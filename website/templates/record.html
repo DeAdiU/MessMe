@@ -1,0 +1,38 @@
+{% extends 'basic.html' %}
+{% block content %}
+
+
+
+<div class="card">
+  <div class="card-header"><strong>
+    	{{ Menu.mess_name }} 
+		{{ Menu.price }}</strong>
+  </div>
+  <div class="card-body">
+
+
+
+<p class="card-text">
+<strong>Email: </strong>{{ Menu.mess_menu }}</p>
+
+<p class="card-text">
+<strong>Phone: </strong>{{ Menu.phone }}
+</p>
+
+<p class="card-text">
+<strong>Address: </strong>{{ Menu.address }}</p>
+
+<p class="card-text">
+<strong>Create At: </strong>{{ Menu.created_at }}</p>
+
+<p class="card-text">
+<strong>ID: </strong>{{ Menu.id }}</p>
+    
+    
+  </div>
+</div>
+
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}
