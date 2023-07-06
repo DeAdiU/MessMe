@@ -1,0 +1,38 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Mess Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+{% if records %}
+	{% for record in records %}
+		<tr>
+			<td>{{ record.mess_name }}</td>
+			<td>{{ record.price }}</td>
+		</tr>
+	{% endfor %}
+
+{% endif %}
+
+	
+	  </tbody>
+	</table>
+
+
+
+
+
+
+
+
+
+{% endblock %}

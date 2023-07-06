@@ -19,7 +19,7 @@
 {% if records %}
 	{% for record in records %}
 		<tr>
-			<td><a href="{% url 'menu' record.id %}">{{ record.id }}</a></td>
+			<td><a href="{%url 'mess' record.id%}">{{ record.mess_name }}</td>
 			<td>{{ record.price }}</td>
 		</tr>
 	{% endfor %}

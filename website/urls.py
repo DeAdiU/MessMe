@@ -17,13 +17,16 @@ Including another URLconf
 from django.urls import path
 from django.conf.urls import include
 from . import views
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('',views.home,name='home'),
     #path('login/',views.login_user,name='login'),
     path('logout/',views.logout_user,name='logout'),
     path('register/',views.register_user,name='register'),
-    path('menu/<int:pk',views.menu, name='menu'),
-    path('delete_menu/<int:pk',views.delete_menu, name='delete_menu'),
-    path('add_menu/<int:pk',views.add_menu, name='add_menu')
-        ]
+    path('mess/<int:pk>',views.mess_meu, name='mess'),
+    path('delete_menu/<int:pk>',views.delete_menu, name='delete_menu'),
+    path('add_menu/<int:pk',views.add_menu, name='add_menu'),
+    path('menu/',views.menuee,name='menu')
+    
+        ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

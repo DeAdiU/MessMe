@@ -5,28 +5,29 @@
 
 <div class="card">
   <div class="card-header"><strong>
-    	{{ Menu.mess_name }} 
-		{{ Menu.price }}</strong>
+    	{{ mess_meu.mess_name }} </strong></br>
+      <strong>Price:
+		{{ mess_meu.price }}</strong>
   </div>
   <div class="card-body">
 
 
 
 <p class="card-text">
-<strong>Email: </strong>{{ Menu.mess_menu }}</p>
+<strong>Menu: </strong>{{ mess_meu.mess_menu }}</p>
 
 <p class="card-text">
-<strong>Phone: </strong>{{ Menu.phone }}
+<strong>Phone: </strong>{{ mess_meu.phone }}
 </p>
 
 <p class="card-text">
-<strong>Address: </strong>{{ Menu.address }}</p>
+<strong>Address: </strong>{{ mess_meu.address }}</p>
 
 <p class="card-text">
-<strong>Create At: </strong>{{ Menu.created_at }}</p>
+<strong>Created At: </strong>{{ mess_meu.created_at }}</p>
 
 <p class="card-text">
-<strong>ID: </strong>{{ Menu.id }}</p>
+<strong>ID: </strong>{{ mess_meu.id }}</p>
     
     
   </div>

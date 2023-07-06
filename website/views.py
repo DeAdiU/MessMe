@@ -19,7 +19,7 @@ def home(request):
             messages.success(request,"There is error")
             return redirect('home')
     else:
-        return render(request,'home.html',{records:records})
+        return render(request,'home.html',{'records':records})
 
 
 def logout_user(request):
@@ -44,10 +44,10 @@ def register_user(request):
         return render(request, 'register.html', {'form':form})
     return render(request, 'register.html', {'form':form})
 
-def menu(request,pk):
+def mess_meu(request,pk):
     if request.user.is_authenticated:
-        Menu=Record.objects.get(id=pk)
-        return render(request, 'record.html', {'menu':menu})
+        mess_meu=Record.objects.get(id=pk)
+        return render(request, 'record.html', {'mess_meu':mess_meu})
     else:
         messages.success(request,"dekho dekhoo")
         return redirect('home')
@@ -71,3 +71,6 @@ def add_menu(request):
 	else:
 		messages.success(request, "You Must Be Logged In...")
 		return redirect('home')
+def menuee(request):
+     records=Record.objects.all()
+     return render(request,'menu.html',{})

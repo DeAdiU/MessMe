@@ -1,12 +1,40 @@
 <!doctype html>
+{%load static%}
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>MessMe</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://depositphotos.com/stock-photos/thali.html">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
-  <body>
+<style>
+  body {
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    
+  }
+  .container {
+    border: 2px solid white;
+    align-items: center;
+    margin:  80px auto ;
+    padding: 75px auto;
+    width: auto ;
+    border-radius: 28px auto;
+    background-color: rgba(255, 255, 255, 0.651);
+    opacity: 70%;
+}
+</style>
+  <body style="background-image: url('{% static 'img/heh.jpg' %}')">
     {%include 'navbar.html' %}
     <div class="container">
       <br>
